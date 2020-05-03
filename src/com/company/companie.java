@@ -1,12 +1,15 @@
 package com.company;
+import service.auditing;
+
 import java.util.Arrays;
 public class companie implements interfataCompanie {
     private Masina masini[];
     private Ruta rute[];
     private Legatura legaturi[];
+    private Oras[] harta;
     private int nr_masini;
     private int nr_rute;
-
+    auditing audit=new auditing();
     public companie(){}
     public companie(Masina masini[],Oras orase[],Ruta rute[],int nr_masini,int nr_rute)
     {
@@ -14,6 +17,7 @@ public class companie implements interfataCompanie {
         this.rute=rute;
         this.nr_masini=nr_masini;
         this.nr_rute=nr_rute;
+        this.harta=orase;
         int nr_legaturi=0;
 
         for(Ruta r:rute) {
@@ -22,7 +26,7 @@ public class companie implements interfataCompanie {
            {
                for (int i=0;i<orase.length;i++)
                {
-                   if (orase[i].NumeOras() == oras.NumeOras())
+                   if (orase[i].NumeOras().equals(oras.NumeOras()))
                    {
                        orase[i].adRuta();
                        break;
@@ -44,7 +48,7 @@ public class companie implements interfataCompanie {
 
                     for (Oras oras_ruta:r.Orase())
                     {
-                        if(oras_ruta.NumeOras()==o.NumeOras())
+                        if(oras_ruta.NumeOras().equals(o.NumeOras()))
                         {
                             ruta_c=new Ruta[rute_leg.length+1];
                             for (int i=0;i<rute_leg.length;i++)
@@ -84,6 +88,7 @@ public class companie implements interfataCompanie {
         masini_c[nr_masini]=masina;
         this.nr_masini+=1;
         masini=masini_c;
+        audit.masinaNoua();
     }
     public void RutaNoua(Ruta ruta)
     {
@@ -92,7 +97,7 @@ public class companie implements interfataCompanie {
             rute_c[i]=this.rute[i];
         rute_c[nr_rute]=ruta;
         rute=rute_c;
-
+        audit.rutaNoua();
     }
     public Masina[] getMasini()
     {
@@ -113,6 +118,10 @@ public class companie implements interfataCompanie {
     public int getNr_rute()
     {
         return nr_rute;
+    }
+
+    public Oras[] getHarta() {
+        return harta;
     }
 
     @Override

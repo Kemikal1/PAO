@@ -13,6 +13,18 @@ public class Legatura extends Oras
      this.rute=rute;
 
     }
+    public Ruta[] getRute()
+    {
+        return rute;
+    }
 
-   
+    @Override
+    public String getNume() {
+        return super.getNume();
+    }
+
+    @Override
+    public int getNr_rute() {
+        return super.getNr_rute();
+    }
 }

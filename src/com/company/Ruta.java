@@ -27,6 +27,29 @@ public class Ruta {
         return orase;
     }
 
+    public int getDistanta() {
+        return distanta;
+    }
+
+    public int getNr_masini() {
+        return nr_masini;
+    }
+    public String getMarfa()
+    {
+        return marfa;
+    }
+    public String getNume(){
+        return nume;
+    }
+    public Masina[] getMasini()
+    {
+        return masini;
+    }
+
+    public Oras[] getOrase() {
+        return orase;
+    }
+
     @Override
     public String toString() {
         return "masini:"+ Arrays.toString(masini) +" \n orase:"+Arrays.toString(orase)+"\n distanta:"+distanta+"\n nr masini:"

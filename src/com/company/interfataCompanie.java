@@ -1,9 +1,9 @@
 package com.company;
 
 public interface interfataCompanie {
-    public String afisRutele();
-    public String afisMasinile();
-    public String afisLegaturile();
-    public void MasinaNoua(Masina masina);
-    public void RutaNoua(Ruta ruta);
+     String afisRutele();
+     String afisMasinile();
+     String afisLegaturile();
+     void MasinaNoua(Masina masina);
+     void RutaNoua(Ruta ruta);
 }

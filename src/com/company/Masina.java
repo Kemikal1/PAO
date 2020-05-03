@@ -16,7 +16,12 @@ public class Masina {
 
     @Override
     public String toString() {
-        return marca+" "+model;
+
+        return marca+","+model;
+    }
+    public String caracteristici()
+    {
+        return String.valueOf(consum_perkm)+","+String.valueOf(masa_de_transport);
     }
 
 
