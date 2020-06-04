@@ -20,6 +20,8 @@ public class auditing {
             bw.append("Ruta_noua");
             bw.append(",");
             bw.append(dateFormat.format(date));
+            bw.append(",");
+            bw.append(Thread.currentThread().getName());
             bw.append("\n");
         }
          catch(IOException ex) {
@@ -34,6 +36,8 @@ public class auditing {
             bw.append("Masina_Noua");
             bw.append(",");
             bw.append(dateFormat.format(date));
+            bw.append(",");
+            bw.append(Thread.currentThread().getName());
             bw.append("\n");
         }
         catch(IOException ex) {

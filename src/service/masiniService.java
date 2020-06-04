@@ -50,6 +50,7 @@ public class masiniService {
             String masina;
             while(nrMasini>0){
                 masina=br.readLine();
+
                 String[] masinaD=masina.split(",");
                 int consum;
                 int m_transport;
@@ -89,6 +90,7 @@ public class masiniService {
             bw.append("\n");
             while(nrmasini>0)
             {
+
                 String append=masini[nrmasini-1].toString()+","+masini[nrmasini-1].caracteristici();
                 bw.append(append);
                 bw.append("\n");

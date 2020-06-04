@@ -4,8 +4,8 @@ Bucuresti Ploiesti
 Volvo,FE,25,8
 oi,700,1
 2
-Ploiesti,0,
-Bucuresti,0,
+Ploiesti,2,
+Bucuresti,2,
 
 Constanta Pitesti Brasov
 2
@@ -13,9 +13,9 @@ Scania,Seria P,30,10
 Isuzu,Seria N,20,6
 mancare,600,2
 3
-Brasov,0,
-Ploiesti,0,
-Pitesti,0,
+Brasov,1,
+Ploiesti,2,
+Pitesti,1,
 
 Bucuresti Constanta
 2
@@ -23,8 +23,8 @@ Iveco,S-way,26,6
 Hyundai,HD36L,22,5
 fiare,440,2
 4
-Constanta,0,
-Galati,0,
-Braila,0,
-Bucuresti,0,
+Constanta,1,
+Galati,1,
+Braila,1,
+Bucuresti,2,
 

@@ -2,6 +2,8 @@ package com.company;
 import service.*;
 import helper.*;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.Arrays;
 
 public class Main {
@@ -15,7 +17,7 @@ public class Main {
         companie=new companieHelper().companieInitiala();
 
         mService m=new mService();
-        companie=m.citire();
+        //companie=m.citire();
 
         System.out.println("Masinile sunt:"+Arrays.toString(companie.getMasini())+"\n");
         System.out.println("Rutele sunt"+Arrays.toString(companie.getRute()));
@@ -29,6 +31,9 @@ public class Main {
         Oras []o=companie.getHarta();
         System.out.println(Arrays.toString(o));
         m.scriere(companie);
+        mDatabase_Service dService= new mDatabase_Service();
+        dService.citire();
+        //dService.scriere(companie);
 
         //m.scriere(companie);
     }
